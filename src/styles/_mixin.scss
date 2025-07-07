@@ -1,0 +1,40 @@
+@mixin back-img() {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin flex-layout($justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-middle($flex-direction, $gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $flex-direction;
+  gap: $gap;
+}
+
+@mixin border($border-width, $border-color, $border-style) {
+  border-width: $border-width;
+  border-color: $border-color;
+  border-style: $border-style;
+}
+
+@mixin font($font-size, $font-weight, $font-color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
+@mixin flex-layout-plus($justify, $align, $flex-direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+}

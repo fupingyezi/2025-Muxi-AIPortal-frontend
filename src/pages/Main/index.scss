@@ -1,0 +1,94 @@
+.home-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Roboto;
+}
+
+.home-sider {
+  height: 100vh;
+  background-color: #fff;
+  @include border(0px 1px 0px 0px, #e5e7eb, solid);
+
+  &-header {
+    height: 25%;
+    width: 100%;
+    padding: 1.75rem 0px;
+    @include border(0px 0px 1px 0px, #e5e7eb, solid);
+    @include flex-middle(column, 2rem);
+
+    > .header-title {
+      height: 1.5rem;
+      width: 100%;
+      padding: 1rem;
+      @include flex-middle(row, 0px);
+      @include flex-layout(space-between, center);
+      @include font(1.25rem, 600, #1f2937);
+
+      > .header-title-left {
+        text-align: center;
+        @include flex-middle(row, 0.5rem);
+      }
+
+      .header-left-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 1rem;
+      }
+
+      .header-right-icon {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    > .header-button {
+      @include flex-middle(row, 0.5rem);
+      @include flex-layout(flex-start, center);
+      width: calc(100% - 2rem);
+      height: 3rem;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      background: rgba(139, 92, 246, 0.102);
+      font-size: 1rem;
+      color: #8b5cf6;
+    }
+  }
+
+  &-function {
+    padding: 0 1rem;
+    @include font(0.875rem, 500, #374151);
+    margin-top: 1.875rem;
+    min-height: 14rem;
+  }
+
+  .siber-subtitle {
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.7px;
+    @include font(0.875rem, 500, #6b7280);
+  }
+
+  &-history {
+    padding: 0 1rem;
+    .history-item {
+        padding: 0 1rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center !important;
+        border-radius: 0.5rem;
+        &-title {
+            @include font(0.875rem, 500, #374151);
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: #e7e9e9;
+        }
+    }
+  }
+}
+
+.home-content {
+    background-color: #f9fafb;
+    position: relative;
+    @include flex-layout-plus(center, center, column);
+}

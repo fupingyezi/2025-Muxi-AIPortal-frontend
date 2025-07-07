@@ -1,0 +1,73 @@
+.welcome-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  font-family: Roboto;
+
+  &-backimg {
+    @include back-img();
+    z-index: -2;
+    // 图片适应屏幕大小
+    object-fit: cover;
+  }
+
+  &-overlay {
+    @include back-img();
+    background:
+      linear-gradient(0deg, rgba(139, 92, 246, 0.102), rgba(139, 92, 246, 0.102)),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: -1;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    &-left {
+      width: 90%;
+      @include flex-layout(flex-start, center);
+      gap: 10px;
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: normal;
+      color: #fdcd22;
+    }
+    &-right {
+      width: 10%;
+      @include flex-layout(flex-start, center);
+      font-family: Roboto;
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  }
+
+  &-content {
+    padding: 8rem 11.0625rem;
+    @include flex-layout(flex-start, flex-start);
+    flex-direction: column;
+    gap: 2rem;
+    &-icons {
+      @include flex-layout(flex-start, center);
+      gap: 20px;
+    }
+    &-title {
+      font-size: 3.75rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    &-subtitle {
+        width: 41rem;
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+}
